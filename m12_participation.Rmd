@@ -1,0 +1,16 @@
+---
+title: "M12_PARTICIPATION"
+author: "Eashan Kaw"
+date: "4/18/2023"
+output: html_document
+---
+
+```{r}
+library(ggplot2)
+mpg %>% ggplot
+```
+
+
+```{r}
+cars %>% ggplot(carsspeed, dist)
+```
