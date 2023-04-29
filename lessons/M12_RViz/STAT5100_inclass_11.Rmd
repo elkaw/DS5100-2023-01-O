@@ -1,0 +1,49 @@
+---
+title: "stat5100_inclass_11"
+author: "Eashan Kaw"
+date: "4/11/2023"
+output: html_document
+---
+
+```{r}
+scores <- 
+  tibble(
+    name = c("mike", "carol", "greg", "marcia", "peter", "jan", "bobby", "cindy", "alice"),
+    school = c("south", "south", "south", "south", "north", "north", "north", "south", "south"),
+    teacher = c("johnson", "johnson", "johnson", "johnson",  "smith", "smith", "smith", "perry", "perry"),
+    sex = c("male", "female", "male", "female", "male", "female", "male", "female", "female"),
+    math_score = c(4, 3, 2, 4, 3, 4, 5, 4, 5),
+    reading_score = c(1, 5, 2, 4, 5, 4, 1, 5, 4)
+)
+
+```
+
+
+```{r}
+
+scores %>% group_by(,sex)  %>% summarize(mean(reading_score))
+```
+
+```{r}
+
+scores %>% group_by(,sex)  %>% summarize(mean(reading_score))
+```
+
+```{r}
+scores %>% filter(scores$sex == 'male' & scores$reading_score > 2.25)
+scores
+```
+
+
+```{r}
+scores %>% filter(scores$reading_score >= 4 & scores$math_score >= 3)
+```
+
+
+```{r}
+scores %>% filter(,scores$reading_score %in% 2:4)
+```
+
+```{r}
+scores %>% group_by(teacher)  %>% summarise(max(math_score)) %>% filter(max(math_score) == 5)
+```
